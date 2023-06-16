@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DevoirjavaScript</title>
+</head>
+<body>
+    <center>
+        <h1>Mon Bouton</h1>
+
+        <button id="Button" class="color-change-button">Cliquez pour changer de couleur</button>
+    </center>
+
+    <script>
+        
+        const button = document.getElementById('Button');
+
+        const colors = ['blue', 'green', 'red', 'purple', 'orange'];
+        let currentColorIndex = 0;
+
+        // Fonction pour changer la couleur du bouton
+        function changeColor() {
+            // Changer la couleur 
+            button.style.backgroundColor = colors[currentColorIndex];
+
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        }
+        button.addEventListener('click', changeColor);
+
+    </script>
+</body>
+</html>
